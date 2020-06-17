@@ -16,6 +16,7 @@ INSERT INTO survey_surveys
 VALUES
 ('test_survey', 'Test Survey', '{}', 'editing');
 
+--could separate the user from the survey?. so have a users table that gets associated to surveys. username/password/salt would go in users table, 
 CREATE TABLE survey_users (
     id SERIAL PRIMARY KEY,
     survey_id SERIAL REFERENCES survey_surveys(id),

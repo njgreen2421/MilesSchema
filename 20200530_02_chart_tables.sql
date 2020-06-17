@@ -5,7 +5,7 @@ CREATE TABLE chart_user_groups (
     survey_id SERIAL REFERENCES survey_surveys(id)
 );
 
-CREATE TABLE chart_user_groups_memebers (
+CREATE TABLE chart_user_groups_members (
     group_id SERIAL REFERENCES chart_user_groups(id) NOT NULL,
     user_id SERIAL REFERENCES survey_users(id) NOT NULL,
     UNIQUE (group_id, user_id)
